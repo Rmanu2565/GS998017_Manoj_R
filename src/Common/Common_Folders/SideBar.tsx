@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalculator, faChartArea, faHouse, faStore } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { faProductHunt } from '@fortawesome/free-brands-svg-icons'
 
 function SideBar(props: any) {
@@ -12,22 +12,30 @@ function SideBar(props: any) {
             <Header />
 
             <div className="grid grid-cols-12 pt-[60px]">
-                <div className="col-span-1 fixed left-0 top-16 h-[100vh] w-32 ">
-                    <Link to='/'>
-                        <h1 className="text-black mt-4">
+                <div className="col-span-1 fixed left-0 top-20 h-[100vh] w-32 ">
+                    <NavLink to='/' className={({ isActive }) =>
+                        `flex items-center  py-2 ${isActive ? "bg-[#DFDFDF]" : "bg-white"
+                        }`
+                    }>
+                        <h1 className="text-black ">
                             <FontAwesomeIcon icon={faStore} className="mx-2 " /> <span className='font-semibold'>Store</span>
                         </h1>
-                    </Link>
-                    <Link to={"/sku"}>
-                        <h1 className="text-black mt-2 ">
+                    </NavLink>
+                    <NavLink to={"/sku"} className={({ isActive }) =>
+                        `flex items-center  py-2  ${isActive ? "bg-[#DFDFDF]" : "bg-white"
+                        }`
+                    }>
+                        <h1 className="text-black  " >
                             <FontAwesomeIcon icon={faProductHunt} className="mx-2 " /> <span className='font-semibold'>SKU</span>
                         </h1>
-                    </Link>
-                    <Link to={"/calculations"}>
-                        <h1 className="text-black mt-2 ">
+                    </NavLink>
+                    <NavLink to={"/calculations"} className={({ isActive }) =>
+                        `flex items-center  py-2  ${isActive ? "bg-[#DFDFDF]" : "bg-white"
+                        }`}>
+                        <h1 className="text-black  ">
                             <FontAwesomeIcon icon={faCalculator} className="mx-2 " /> <span className='font-semibold'>Calculation</span>
                         </h1>
-                    </Link>
+                    </NavLink>
                 </div>
 
                 <div className="col-span-12 ml-32 ">
