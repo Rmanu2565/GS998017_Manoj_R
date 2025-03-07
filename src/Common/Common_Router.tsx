@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from '../Pages/Components/Home';
 import Sku from '../Pages/Components/Sku';
+import Calculation from '../Pages/Components/Calculation';
 // import FinancialTable from '../Pages/Components/Calculation';
 
 function Common_Router() {
@@ -17,10 +18,10 @@ function Common_Router() {
                         path='/sku'
                         element={<Sku />}
                     />
-                    {/* <Route
+                    <Route
                         path='/calculations'
-                        element={<FinancialTable />}
-                    /> */}
+                        element={<Calculation />}
+                    />
                 </Routes>
 
             </Router>

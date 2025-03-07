@@ -2,11 +2,11 @@ import React, { useReducer, useState, useEffect } from 'react';
 import SideBar from '../../Common/Common_Folders/SideBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAdd, faEdit, faRemove, faMultiply } from '@fortawesome/free-solid-svg-icons';
-import { storesData } from '../File/store'; // Import static data
-import { storeReducer, Store, StoreAction } from '../Reducer/storeReducer'; // Import reducer and types
+import { storesData } from '../File/store'; 
+import { storeReducer, Store, StoreAction } from '../Reducer/storeReducer'; 
 
 function ChildHome() {
-    const [store, dispatch] = useReducer(storeReducer, storesData); // Initialize state with reducer
+    const [store, dispatch] = useReducer(storeReducer, storesData); 
     const [data, setData] = useState<Store>({ id: "", Label: "", City: "", State: "" });
     const [modalOpen, setModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState("");

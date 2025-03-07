@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChartArea, faHouse, faStore } from '@fortawesome/free-solid-svg-icons'
+import { faCalculator, faChartArea, faHouse, faStore } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import { faProductHunt } from '@fortawesome/free-brands-svg-icons'
 
@@ -21,6 +21,11 @@ function SideBar(props: any) {
                     <Link to={"/sku"}>
                         <h1 className="text-black mt-2 ">
                             <FontAwesomeIcon icon={faProductHunt} className="mx-2 " /> <span className='font-semibold'>SKU</span>
+                        </h1>
+                    </Link>
+                    <Link to={"/calculations"}>
+                        <h1 className="text-black mt-2 ">
+                            <FontAwesomeIcon icon={faCalculator} className="mx-2 " /> <span className='font-semibold'>Calculation</span>
                         </h1>
                     </Link>
                 </div>

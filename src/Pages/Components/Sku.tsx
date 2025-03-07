@@ -7,7 +7,7 @@ import { skuReducer, SkuItem, SkuAction } from '../Reducer/skuReducer'; // Impor
 
 function ChildSku() {
 
-    const [originalSku, dispatch] = useReducer(skuReducer, skuData);; // Initialize state with reducer
+    const [originalSku, dispatch] = useReducer(skuReducer, skuData); // Initialize state with reducer
     const [filteredSku, setFilteredSku] = useState(originalSku); // State for filtered results
     const [btn, setBtn] = useState(true);
     const [modalContent, setModalContent] = useState("");
