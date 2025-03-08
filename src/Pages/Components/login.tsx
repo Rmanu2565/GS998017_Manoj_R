@@ -12,9 +12,11 @@ function Login() {
 
     const handleLogin = () => {
         if (credentials.email == data.email && credentials.password == data.password) {
-            console.log("first")
             localStorage.setItem("login", "true")
             navigate("/store")
+        }
+        else{
+            alert("Email or Password is Incorrect")
         }
     }
     return (
