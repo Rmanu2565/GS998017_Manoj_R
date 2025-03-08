@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from '../Pages/Components/Home';
 import Sku from '../Pages/Components/Sku';
 import Calculation from '../Pages/Components/Calculation';
+import Login from '../Pages/Components/login';
 // import FinancialTable from '../Pages/Components/Calculation';
 
 function Common_Router() {
@@ -11,7 +12,7 @@ function Common_Router() {
             <Router>
                 <Routes>
                     <Route
-                        path=''
+                        path='/store'
                         element={<Home />}
                     />
                     <Route
@@ -21,6 +22,10 @@ function Common_Router() {
                     <Route
                         path='/calculations'
                         element={<Calculation />}
+                    />
+                    <Route
+                        path='/'
+                        element={<Login />}
                     />
                 </Routes>
 

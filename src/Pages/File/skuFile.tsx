@@ -1,4 +1,4 @@
-// skuData.ts
+
 export const skuData = [
     {
         id: "SK00158",

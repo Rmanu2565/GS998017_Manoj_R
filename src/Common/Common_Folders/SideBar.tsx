@@ -1,19 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from './Header'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalculator, faChartArea, faHouse, faStore } from '@fortawesome/free-solid-svg-icons'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { faProductHunt } from '@fortawesome/free-brands-svg-icons'
 
 function SideBar(props: any) {
     const { mainData } = props
+
+    const navigate = useNavigate()
+    useEffect(() => {
+        if (localStorage.getItem("login")) {
+            console.log("")
+        }
+        else {
+            navigate("/")
+        }
+    }, [])
+
     return (
         <>
+
             <Header />
 
             <div className="grid grid-cols-12 pt-[60px]">
                 <div className="col-span-1 fixed left-0 top-20 h-[100vh] w-32 ">
-                    <NavLink to='/' className={({ isActive }) =>
+                    <NavLink to='/store' className={({ isActive }) =>
                         `flex items-center  py-2 ${isActive ? "bg-[#DFDFDF]" : "bg-white"
                         }`
                     }>
@@ -46,8 +58,9 @@ function SideBar(props: any) {
                     </div>
                 </div>
             </div>
-
         </>
+
+
     )
 }
 
